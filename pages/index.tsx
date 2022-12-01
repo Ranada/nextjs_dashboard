@@ -1,6 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { Breadcrumb, IBreadcrumbItem, IDividerAsProps } from '@fluentui/react/lib/Breadcrumb';
 import styles from '../styles/Home.module.css'
+
+const items: IBreadcrumbItem[] = [
+  { text: 'Files', key: 'Files', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 1', key: 'f1', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 2', key: 'f2', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 3', key: 'f3', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 4 (non-clickable)', key: 'f4' },
+  { text: 'Folder 5', key: 'f5', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 6', key: 'f6', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 7', key: 'f7', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 8', key: 'f8', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 9', key: 'f9', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 10', key: 'f10', onClick: _onBreadcrumbItemClicked },
+  { text: 'Folder 11', key: 'f11', onClick: _onBreadcrumbItemClicked, isCurrentItem: true },
+];
 
 export default function Home() {
   return (
@@ -12,8 +28,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <div id={styles.banner} >Banner</div>
+
+        <Breadcrumb
+        items={items}
+        maxDisplayedItems={10}
+        ariaLabel="Breadcrumb with items rendered as buttons"
+        overflowAriaLabel="More links"
+      />
+
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <a href="https://github.com/Ranada/nextjs_dashboard">Next.js Dashboard</a>
         </h1>
 
         <p className={styles.description}>
@@ -68,4 +93,8 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+function _onBreadcrumbItemClicked(ev: React.MouseEvent<HTMLElement>, item: IBreadcrumbItem): void {
+  console.log(`Breadcrumb item with key "${item.key}" has been clicked.`);
 }

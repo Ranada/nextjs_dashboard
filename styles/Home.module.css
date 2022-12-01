@@ -108,6 +108,12 @@
   margin-left: 0.5rem;
 }
 
+#banner {
+  height: 48px;
+  width: 100%;
+  background-color: #004578;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
