@@ -1,20 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Breadcrumb, IBreadcrumbItem, IDividerAsProps } from '@fluentui/react/lib/Breadcrumb';
-import { TooltipHost } from '@fluentui/react/lib/Tooltip';
+// import { Breadcrumb, IBreadcrumbItem, IDividerAsProps } from '@fluentui/react/lib/Breadcrumb';
 import { initializeIcons } from '@fluentui/react/lib/Icons';
-import { Icon } from '@fluentui/react/lib/Icon';
+// import { Icon } from '@fluentui/react/lib/Icon';
+import PivotTabs from './components/PivotTabs'; 
 import styles from '../styles/Home.module.css';
 
 initializeIcons(undefined, { disableWarnings: true });
 
-const items: IBreadcrumbItem[] = [
-  { text: 'Files', key: 'Files', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 1', key: 'f1', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 2', key: 'f2', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 3', key: 'f3', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 4', key: 'f4', onClick: _onBreadcrumbItemClicked, isCurrentItem: true },
-];
+// const items: IBreadcrumbItem[] = [
+//   // { text: 'Files', key: 'Files', onClick: _onBreadcrumbItemClicked },
+//   // { text: 'Folder 1', key: 'f1', onClick: _onBreadcrumbItemClicked },
+//   // { text: 'Folder 2', key: 'f2', onClick: _onBreadcrumbItemClicked },
+//   // { text: 'Folder 3', key: 'f3', onClick: _onBreadcrumbItemClicked },
+//   { text: 'Folder 4', key: 'f4', onClick: _onBreadcrumbItemClicked, isCurrentItem: true },
+// ];
 
 export default function Home() {
   return (
@@ -26,21 +26,25 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div id={styles.banner} >Banner</div>
+        <div id={styles.banner}>
+          <PivotTabs></PivotTabs>
+        </div>
 
-      <Breadcrumb
+        {/* <Breadcrumb
         items={items}
         maxDisplayedItems={10}
         ariaLabel="Breadcrumb with items rendered as buttons"
         overflowAriaLabel="More links"
-      />
+      /> */}
 
         <h1 className={styles.title}>
-          <a href="https://github.com/Ranada/nextjs_dashboard">Next.js Dashboard</a>
+          <a href="https://github.com/Ranada/nextjs_dashboard">
+            Next.js Dashboard
+          </a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
@@ -83,31 +87,16 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
-
-function _onBreadcrumbItemClicked(ev: React.MouseEvent<HTMLElement>, item: IBreadcrumbItem): void {
-  console.log(`Breadcrumb item with key "${item.key}" has been clicked. ${ev.toString()}`);
-}
-
-function _getCustomDivider(dividerProps: IDividerAsProps): JSX.Element {
-  const tooltipText = dividerProps.item ? dividerProps.item.text : '';
-  return (
-    <TooltipHost content={`Show ${tooltipText} contents`} calloutProps={{ gapSpace: 0 }}>
-      <span aria-hidden="true" style={{ cursor: 'pointer', padding: 5 }}>
-        /
-      </span>
-    </TooltipHost>
   );
 }
 
-function _getCustomOverflowIcon(): JSX.Element {
-  return <Icon iconName={'ChevronDown'} />;
-}
+// function _onBreadcrumbItemClicked(ev: React.MouseEvent<HTMLElement>, item: IBreadcrumbItem): void {
+//   console.log(`Breadcrumb item with key "${item.key}" has been clicked. ${ev.toString()}`);
+// }
