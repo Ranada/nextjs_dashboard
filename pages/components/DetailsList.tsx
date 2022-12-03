@@ -386,7 +386,7 @@ function _copyAndSort<T>(
 
 function _generateDocuments() {
   const items: IDocument[] = [];
-  for (let i = 0; i < 500; i++) {
+  for (let i = 0; i < 15; i++) {
     const randomDate = _randomDate(new Date(2012, 0, 1), new Date());
     const randomFileSize = _randomFileSize();
     const randomFileType = _randomFileIcon();
