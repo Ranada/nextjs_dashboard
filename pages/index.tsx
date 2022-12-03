@@ -9,14 +9,6 @@ import BreadCrumbs from './components/BreadCrumbs';
 
 initializeIcons(undefined, { disableWarnings: true });
 
-// const items: IBreadcrumbItem[] = [
-//   // { text: 'Files', key: 'Files', onClick: _onBreadcrumbItemClicked },
-//   // { text: 'Folder 1', key: 'f1', onClick: _onBreadcrumbItemClicked },
-//   // { text: 'Folder 2', key: 'f2', onClick: _onBreadcrumbItemClicked },
-//   // { text: 'Folder 3', key: 'f3', onClick: _onBreadcrumbItemClicked },
-//   { text: 'Folder 4', key: 'f4', onClick: _onBreadcrumbItemClicked, isCurrentItem: true },
-// ];
-
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -28,49 +20,21 @@ export default function Home() {
 
       <main className={styles.main}>
         <AppBar/>
-        <BreadCrumbs/>
+        <div className={styles.breadcrumbs}>
+          <BreadCrumbs />
+        </div>
 
-        <h1 className={styles.title}>
-          <a href="https://github.com/Ranada/nextjs_dashboard">
-            Title
-          </a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div className={styles.card}>
+            <h1>Title</h1>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+            <p className={styles.description}>
+              Get started by editing{" "}
+              <code className={styles.code}>pages/index.tsx</code>
             </p>
-          </a>
+          </div>
+
         </div>
       </main>
 

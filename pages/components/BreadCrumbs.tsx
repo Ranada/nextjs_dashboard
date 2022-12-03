@@ -12,12 +12,12 @@ const items: IBreadcrumbItem[] = [
 export default class BreadCrumbs extends React.Component {
   render() {
     return (
-      <Breadcrumb
-        items={items}
-        maxDisplayedItems={10}
-        ariaLabel="Breadcrumb with items rendered as buttons"
-        overflowAriaLabel="More links"
-      />
+            <Breadcrumb
+              items={items}
+              maxDisplayedItems={10}
+              ariaLabel="Breadcrumb with items rendered as buttons"
+              overflowAriaLabel="More links"
+            />
     );
   }
 }
