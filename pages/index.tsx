@@ -3,8 +3,9 @@ import Image from 'next/image'
 // import { Breadcrumb, IBreadcrumbItem, IDividerAsProps } from '@fluentui/react/lib/Breadcrumb';
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 // import { Icon } from '@fluentui/react/lib/Icon';
-import PivotTabs from './components/PivotTabs'; 
+import AppBar from './components/AppBar';
 import styles from '../styles/Home.module.css';
+import BreadCrumbs from './components/BreadCrumbs';
 
 initializeIcons(undefined, { disableWarnings: true });
 
@@ -26,16 +27,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div id={styles.banner}>
-          <PivotTabs></PivotTabs>
-        </div>
-
-        {/* <Breadcrumb
-        items={items}
-        maxDisplayedItems={10}
-        ariaLabel="Breadcrumb with items rendered as buttons"
-        overflowAriaLabel="More links"
-      /> */}
+        <AppBar/>
+        <BreadCrumbs/>
 
         <h1 className={styles.title}>
           <a href="https://github.com/Ranada/nextjs_dashboard">
@@ -96,7 +89,3 @@ export default function Home() {
     </div>
   );
 }
-
-// function _onBreadcrumbItemClicked(ev: React.MouseEvent<HTMLElement>, item: IBreadcrumbItem): void {
-//   console.log(`Breadcrumb item with key "${item.key}" has been clicked. ${ev.toString()}`);
-// }
