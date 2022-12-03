@@ -29,9 +29,12 @@
   gap: 1.2rem;
 }
 
-/* .footer p {
-  margin: 0 0 16px 0;
-} */
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 24px;
+  gap: 24px;
+}
 
 .footer a {
   display: flex;

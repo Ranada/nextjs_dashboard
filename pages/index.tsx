@@ -44,20 +44,22 @@ export default function Home() {
           />
         </span>
         <p>Developed by{" Neil Ranada, Software Engineer | UX"}</p>
-        <a
-          href="https://github.com/Ranada"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>GitHub</p>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/neilranada/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>LinkedIn</p>
-        </a>
+        <span className={styles.contact}>
+          <a
+            href="https://github.com/Ranada"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>GitHub</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/neilranada/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>LinkedIn</p>
+          </a>
+        </span>
       </footer>
     </div>
   );
