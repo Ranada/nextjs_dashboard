@@ -15,7 +15,7 @@ export default class AppBar extends React.Component {
             alt="Your Name"
           />
         </div>
-        <h4>Next.js</h4>
+        <p>Next.js Dashboard</p>
         <PivotTabs></PivotTabs>
       </div>
     );
