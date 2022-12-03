@@ -40,7 +40,7 @@ export default function Home() {
             src="/images/logo-blue.svg" // Route of the image file
             height={28} // Desired size with correct aspect ratio
             width={28} // Desired size with correct aspect ratio
-            alt="Your Name"
+            alt="neil ranada logo blue"
           />
         </span>
         Developed by{" Neil Ranada, Software Engineer | UX"}

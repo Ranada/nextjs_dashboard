@@ -106,11 +106,13 @@ export class DetailsListDocumentsExample extends React.Component<
         onColumnClick: this._onColumnClick,
         onRender: (item: IDocument) => (
           <TooltipHost content={`${item.fileType} file`}>
-            <img
-              src={item.iconName}
-              className={classNames.fileIconImg}
-              alt={`${item.fileType} file icon`}
-            />
+            <picture>
+                <img
+                src={item.iconName}
+                className={classNames.fileIconImg}
+                alt={`${item.fileType} file icon`}
+                />
+            </picture>
           </TooltipHost>
         ),
       },
