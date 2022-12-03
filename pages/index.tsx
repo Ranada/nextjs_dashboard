@@ -32,7 +32,7 @@ export default function Home() {
 
         <h1 className={styles.title}>
           <a href="https://github.com/Ranada/nextjs_dashboard">
-            Next.js Dashboard
+            Title
           </a>
         </h1>
 

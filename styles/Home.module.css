@@ -8,8 +8,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 .footer {
@@ -47,7 +46,7 @@
 
 .title,
 .description {
-  text-align: center;
+  text-align: left;
 }
 
 .description {
@@ -104,8 +103,8 @@
 }
 
 .logo {
-  height: 1em;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  padding-top: 0.2rem;
 }
 
 #banner {
@@ -113,7 +112,20 @@
   width: 100%;
   background-color: #004578;
   display: flex;
-  gap: 40px;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+#banner * {
+  color: #ffffff;
+}
+
+#banner button {
+  background-color: #004578;
+}
+
+#banner button:hover {
+  background-color: #33323033;
 }
 
 @media (max-width: 600px) {
