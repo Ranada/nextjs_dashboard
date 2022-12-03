@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 // import { Icon } from '@fluentui/react/lib/Icon';
 import AppBar from './components/AppBar';
+import { DetailsListDocumentsExample } from './components/DetailsList';
 import styles from '../styles/Home.module.css';
 import BreadCrumbs from './components/BreadCrumbs';
 
@@ -19,22 +20,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <AppBar/>
+        <AppBar />
         <div className={styles.breadcrumbs}>
           <BreadCrumbs />
         </div>
 
-
         <div className={styles.grid}>
           <div className={styles.card}>
             <h1>Title</h1>
-
             <p className={styles.description}>
-              Get started by editing{" "}
-              <code className={styles.code}>pages/index.tsx</code>
+              Description of contents.
             </p>
+            <DetailsListDocumentsExample />
           </div>
-
         </div>
       </main>
 
