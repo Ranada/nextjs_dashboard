@@ -2,11 +2,11 @@ import React from "react";
 import { Breadcrumb, IBreadcrumbItem, IDividerAsProps } from '@fluentui/react/lib/Breadcrumb';
 
 const items: IBreadcrumbItem[] = [
-  { text: 'Files', key: 'Files', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 1', key: 'f1', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 2', key: 'f2', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 3', key: 'f3', onClick: _onBreadcrumbItemClicked },
-  { text: 'Folder 4', key: 'f4', onClick: _onBreadcrumbItemClicked, isCurrentItem: true },
+  { text: 'Category', key: 'category', onClick: _onBreadcrumbItemClicked },
+  { text: 'Topic 1', key: 't1', onClick: _onBreadcrumbItemClicked },
+  { text: 'Topic 2', key: 't2', onClick: _onBreadcrumbItemClicked },
+  { text: 'Topic 3', key: 't3', onClick: _onBreadcrumbItemClicked },
+  { text: 'Topic 4', key: 't4', onClick: _onBreadcrumbItemClicked, isCurrentItem: true },
 ];
 
 export default class BreadCrumbs extends React.Component {
