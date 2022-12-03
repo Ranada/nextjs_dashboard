@@ -2,7 +2,7 @@
 ***
 
 ## Task
-This will be a dashboard application template using Next.js, React.js, TypeScript, Microsoft's Fluent UI design components.
+This will be a dashboard application template using Next.js, React.js, TypeScript, and Microsoft's Fluent UI design components.
 
 ## Description
 This dashboard project is currently under development, starting with a list view using the following technologies:
