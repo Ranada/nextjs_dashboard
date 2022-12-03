@@ -28,24 +28,35 @@ export default function Home() {
         <div className={styles.grid}>
           <div className={styles.card}>
             <h1>Title</h1>
-            <p className={styles.description}>
-              Description of contents.
-            </p>
+            <p className={styles.description}>Description of contents.</p>
             <DetailsListDocumentsExample />
           </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
+        <span className={styles.logo}>
+          <Image
+            src="/images/logo-blue.svg" // Route of the image file
+            height={28} // Desired size with correct aspect ratio
+            width={28} // Desired size with correct aspect ratio
+            alt="Your Name"
+          />
+        </span>
+        Developed by{" Neil Ranada, Software Engineer | UX"}
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/Ranada"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          <p>GitHub</p>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/neilranada/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>LinkedIn</p>
         </a>
       </footer>
     </div>
